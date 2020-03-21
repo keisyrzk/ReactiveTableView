@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     func setup() {
         
         let sections: [GenericSectionModel] = [
-            .WithHeader(title: "Header 1", items: [.TextItem(title: "Header 1 ::: item 1")], canEdit: true)
+            .WithHeader(title: "Header 1", items: [.TextItem(title: "Header 1 ::: item 1")], footerConfig: FooterConfigData(), headerConfig: HeaderConfigData(style: .simpleText), canEdit: true)
         ]
         tableView.setSections(sections: sections)
         
@@ -41,6 +41,9 @@ class ViewController: UIViewController {
                     
                 case .Delete(section: let section):
                     print("::: SECTION deleted at \(section)")
+                    
+                case .SortHeaderChanged(state: let state):
+                    print("::: SORT \(state)")
                     
                 default:
                     break
@@ -59,7 +62,7 @@ class ViewController: UIViewController {
     
     @IBAction func addSection(_ sender: Any) {
         
-        tableView.append(sections: [.WithHeader(title: "Header \(tableView.sectionsObservable.value.count + 1)", items: [.TextItem(title: "Header \(tableView.sectionsObservable.value.count + 1) ::: item 1")], canEdit: false)])
+        tableView.append(sections: [GenericSectionModel.WithHeader(title: "Header \(tableView.sectionsObservable.value.count + 1)", items: [GenericSectionItem.TextItem(title: "Header \(tableView.sectionsObservable.value.count + 1) ::: item 1")], footerConfig: FooterConfigData(), headerConfig: HeaderConfigData(style: .sort), canEdit: false)])
         
 //        tableView.insert(sections: [.WithHeader(title: "Header \(tableView.sectionsObservable.value.count + 1)", items: [.TextItem(title: "Header \(tableView.sectionsObservable.value.count + 1) ::: item 1")], canEdit: false)], at: 0)
     }

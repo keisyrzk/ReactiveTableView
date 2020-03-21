@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Sofia Pro Regular.ttf">
+            <string>SofiaPro-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TextFooter" customModule="Spark" customModuleProvider="target">
+            <connections>
+                <outlet property="bottomSeparator" destination="kQn-f8-Jai" id="rJM-rv-Uhs"/>
+                <outlet property="bottomSpace" destination="Kbl-tD-k3V" id="NBZ-av-HJm"/>
+                <outlet property="contentView" destination="7Xv-3g-AhT" id="QrI-Os-clb"/>
+                <outlet property="leftSpace" destination="Bdz-MN-E5E" id="s0R-b3-xJF"/>
+                <outlet property="rightSpace" destination="N3a-Kr-xLf" id="3aH-VQ-icg"/>
+                <outlet property="textLabel" destination="U1u-cr-wio" id="hhk-b3-wHc"/>
+                <outlet property="topSeparator" destination="CC8-WN-Trm" id="gnW-R5-C3g"/>
+                <outlet property="topSpace" destination="3bz-9f-7th" id="OlA-oO-hka"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="7Xv-3g-AhT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="123"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U1u-cr-wio">
+                    <rect key="frame" x="25" y="0.0" width="364" height="123"/>
+                    <fontDescription key="fontDescription" name="SofiaPro-Regular" family="Sofia Pro" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kQn-f8-Jai">
+                    <rect key="frame" x="0.0" y="122" width="414" height="1"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="PgU-WN-5m4"/>
+                    </constraints>
+                </view>
+                <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CC8-WN-Trm">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="1"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="ADj-JE-LZ0"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="U1u-cr-wio" firstAttribute="top" secondItem="7Xv-3g-AhT" secondAttribute="top" id="3bz-9f-7th"/>
+                <constraint firstItem="U1u-cr-wio" firstAttribute="leading" secondItem="beJ-W9-nzt" secondAttribute="leading" constant="25" id="Bdz-MN-E5E"/>
+                <constraint firstAttribute="bottom" secondItem="U1u-cr-wio" secondAttribute="bottom" id="Kbl-tD-k3V"/>
+                <constraint firstItem="CC8-WN-Trm" firstAttribute="top" secondItem="7Xv-3g-AhT" secondAttribute="top" id="Maa-M6-f0x"/>
+                <constraint firstItem="beJ-W9-nzt" firstAttribute="trailing" secondItem="U1u-cr-wio" secondAttribute="trailing" constant="25" id="N3a-Kr-xLf"/>
+                <constraint firstItem="kQn-f8-Jai" firstAttribute="leading" secondItem="beJ-W9-nzt" secondAttribute="leading" id="NXL-zQ-VdW"/>
+                <constraint firstItem="beJ-W9-nzt" firstAttribute="trailing" secondItem="kQn-f8-Jai" secondAttribute="trailing" id="XBs-c0-1E4"/>
+                <constraint firstItem="CC8-WN-Trm" firstAttribute="leading" secondItem="7Xv-3g-AhT" secondAttribute="leading" id="p6v-GR-IKS"/>
+                <constraint firstAttribute="bottom" secondItem="kQn-f8-Jai" secondAttribute="bottom" id="rne-fL-Z4a"/>
+                <constraint firstAttribute="trailing" secondItem="CC8-WN-Trm" secondAttribute="trailing" id="uEU-ge-Bz1"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="beJ-W9-nzt"/>
+            <point key="canvasLocation" x="137.68115942028987" y="-127.56696428571428"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Sofia Pro Regular.ttf">
+            <string>SofiaPro-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SimpleTextHeader" customModule="Spark" customModuleProvider="target">
+            <connections>
+                <outlet property="bottomSeparator" destination="M1c-tL-Rd3" id="mWa-hZ-vye"/>
+                <outlet property="bottomSpace" destination="0qB-5U-3G6" id="ezQ-uu-YRk"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="Joa-WM-tWA"/>
+                <outlet property="leftSpace" destination="c37-9J-cR4" id="HrM-ld-Yb5"/>
+                <outlet property="rightSpace" destination="VsS-E6-qYJ" id="qLe-YB-zK7"/>
+                <outlet property="textLabel" destination="xup-UE-1y3" id="zOe-6z-T7u"/>
+                <outlet property="topSeparator" destination="tF0-iH-wv2" id="DRr-7t-pwB"/>
+                <outlet property="topSpace" destination="kxU-bY-4z6" id="z1a-R4-XXF"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="123"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xup-UE-1y3">
+                    <rect key="frame" x="25" y="0.0" width="364" height="123"/>
+                    <fontDescription key="fontDescription" name="SofiaPro-Regular" family="Sofia Pro" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M1c-tL-Rd3">
+                    <rect key="frame" x="0.0" y="122" width="414" height="1"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="b8t-Vb-Oya"/>
+                    </constraints>
+                </view>
+                <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tF0-iH-wv2">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="1"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="hd3-Tc-kei"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="xup-UE-1y3" secondAttribute="bottom" id="0qB-5U-3G6"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="xup-UE-1y3" secondAttribute="trailing" constant="25" id="VsS-E6-qYJ"/>
+                <constraint firstItem="xup-UE-1y3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="25" id="c37-9J-cR4"/>
+                <constraint firstItem="M1c-tL-Rd3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="fya-ba-ZyZ"/>
+                <constraint firstItem="xup-UE-1y3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="kxU-bY-4z6"/>
+                <constraint firstItem="tF0-iH-wv2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="oLN-hZ-YhS"/>
+                <constraint firstAttribute="trailing" secondItem="M1c-tL-Rd3" secondAttribute="trailing" id="sZQ-Zj-fyb"/>
+                <constraint firstAttribute="trailing" secondItem="tF0-iH-wv2" secondAttribute="trailing" id="uSE-Yu-BbR"/>
+                <constraint firstItem="tF0-iH-wv2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="wYz-ag-k6M"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="M1c-tL-Rd3" secondAttribute="bottom" id="yk4-Mw-mr4"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="137.68115942028987" y="-127.56696428571428"/>
+        </view>
+    </objects>
+</document>

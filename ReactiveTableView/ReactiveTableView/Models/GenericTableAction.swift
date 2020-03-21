@@ -34,4 +34,7 @@ indirect enum GenericTableAction {
     case Delete(section: Int)
     
     case SelectedAuthor(data: Author)
+    
+    //Headers
+    case SortHeaderChanged(state: Bool)
 }
