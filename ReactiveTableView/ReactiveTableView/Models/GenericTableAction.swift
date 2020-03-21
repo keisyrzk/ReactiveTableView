@@ -32,4 +32,6 @@ indirect enum GenericTableAction {
     
     case DeleteItem(index: IndexPath)
     case Delete(section: Int)
+    
+    case SelectedAuthor(data: Author)
 }
