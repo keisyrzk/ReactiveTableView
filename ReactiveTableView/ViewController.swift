@@ -52,11 +52,16 @@ class ViewController: UIViewController {
     @IBAction func add(_ sender: Any) {
         
         tableView.append(items: [.TextItem(title: "Header 1 ::: item \(tableView.sectionsObservable.value[0].items.count + 1)")], toSection: 0)
+        
+//        tableView.insert(item: .TextItem(title: "Header 1  inserted ::: item \(tableView.sectionsObservable.value[0].items.count + 1)"), toSection: 0, at: 0)
+        
     }
     
     @IBAction func addSection(_ sender: Any) {
         
         tableView.append(sections: [.WithHeader(title: "Header \(tableView.sectionsObservable.value.count + 1)", items: [.TextItem(title: "Header \(tableView.sectionsObservable.value.count + 1) ::: item 1")], canEdit: false)])
+        
+//        tableView.insert(sections: [.WithHeader(title: "Header \(tableView.sectionsObservable.value.count + 1)", items: [.TextItem(title: "Header \(tableView.sectionsObservable.value.count + 1) ::: item 1")], canEdit: false)], at: 0)
     }
     
     @IBAction func delete1stSection(_ sender: Any) {

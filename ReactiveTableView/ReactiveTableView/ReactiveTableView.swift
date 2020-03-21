@@ -37,7 +37,6 @@ class ReactiveTableView: UITableView, UITableViewDelegate {
     
     var sectionsObservable = CurrentValueSubject<[GenericSectionModel], Error>([])
     var customActionsObservable = PassthroughSubject<GenericTableAction, Error>()
-    @Published var sectionsLeftToLoadObservable: Int = 0
     @Published var tableDidScrollObservable: ScrollViewInfo? = nil
 
     typealias ScrollViewInfo = (scrollView: UIScrollView, direction: ScrollingDirection)
@@ -56,7 +55,6 @@ class ReactiveTableView: UITableView, UITableViewDelegate {
         
         registerCells()
         setupTable()
-//        setupEditingActions()
     }
     
     private func setupTable() {
@@ -65,10 +63,10 @@ class ReactiveTableView: UITableView, UITableViewDelegate {
         self.dataSource = self
         
         self.keyboardDismissMode = .onDrag
-        sectionsObservable.sink(receiveCompletion: { (_) in
-        }) { [weak self] (_) in
-//            self?.reloadData()
-        }
-        .dispose()
+//        sectionsObservable.sink(receiveCompletion: { (_) in
+//        }) { [weak self] (_) in
+////            self?.reloadData()
+//        }
+//        .dispose()
     }
 }
