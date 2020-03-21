@@ -37,10 +37,11 @@ class ReactiveTableView: UITableView, UITableViewDelegate {
     
     var sectionsObservable = CurrentValueSubject<[GenericSectionModel], Error>([])
     var customActionsObservable = PassthroughSubject<GenericTableAction, Error>()
-    @Published var tableDidScrollObservable: ScrollViewInfo? = nil
+    var tableDidScrollObservable = PassthroughSubject<ScrollViewInfo, Error>()
 
     typealias ScrollViewInfo = (scrollView: UIScrollView, direction: ScrollingDirection)
     typealias HeaderInfo = (view: UIView, section: Int)
+    
     var headers: [HeaderInfo] = []
     var lastContentOffset: CGFloat = 0
     
@@ -63,10 +64,5 @@ class ReactiveTableView: UITableView, UITableViewDelegate {
         self.dataSource = self
         
         self.keyboardDismissMode = .onDrag
-//        sectionsObservable.sink(receiveCompletion: { (_) in
-//        }) { [weak self] (_) in
-////            self?.reloadData()
-//        }
-//        .dispose()
     }
 }

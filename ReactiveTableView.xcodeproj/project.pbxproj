@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B0EE73C24263E5100DB65DD /* Scrolling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0EE73B24263E5100DB65DD /* Scrolling.swift */; };
 		5BC1ECDA2422B0720045F68E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC1ECD92422B0720045F68E /* AppDelegate.swift */; };
 		5BC1ECDC2422B0720045F68E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC1ECDB2422B0720045F68E /* SceneDelegate.swift */; };
 		5BC1ECDE2422B0720045F68E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC1ECDD2422B0720045F68E /* ViewController.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B0EE73B24263E5100DB65DD /* Scrolling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scrolling.swift; sourceTree = "<group>"; };
 		5BC1ECD62422B0720045F68E /* ReactiveTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BC1ECD92422B0720045F68E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BC1ECDB2422B0720045F68E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				5BC1ECF62422B2B90045F68E /* CellsRegister.swift */,
 				5BC1ECFA2422B32C0045F68E /* Datasource.swift */,
 				5BF3BD6F2422C04400284F67 /* Editing.swift */,
+				5B0EE73B24263E5100DB65DD /* Scrolling.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				5BC1ECDE2422B0720045F68E /* ViewController.swift in Sources */,
 				5BC1ECDA2422B0720045F68E /* AppDelegate.swift in Sources */,
 				5BC1ED032422B3C20045F68E /* CustomSubscriber.swift in Sources */,
+				5B0EE73C24263E5100DB65DD /* Scrolling.swift in Sources */,
 				5BC1ECFB2422B32C0045F68E /* Datasource.swift in Sources */,
 				5BC1ED052422B3C20045F68E /* Combine+UIControl.swift in Sources */,
 				5BC1ECF52422B2800045F68E /* GenericTableAction.swift in Sources */,
