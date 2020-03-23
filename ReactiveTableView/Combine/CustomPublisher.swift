@@ -1,53 +1,32 @@
+////
+////  CustomPublisher.swift
+////  Lerni
+////
+////  Created by Esteban on 16/03/2020.
+////  Copyright © 2020 Selfcode. All rights reserved.
+////
 //
-//  CustomPublisher.swift
-//  Lerni
+//import UIKit
+//import Combine
 //
-//  Created by Esteban on 16/03/2020.
-//  Copyright © 2020 Selfcode. All rights reserved.
+//struct UIControlPublisher<Control: UIControl>: Publisher {
 //
-
-import UIKit
-import Combine
-
-struct UIControlPublisher<Control: UIControl>: Publisher {
-    
-    typealias Output = Control
-    typealias Failure = Never
-    
-    let control: Control
-    let controlEvents: UIControl.Event
-    
-    
-    init(control: Control, events: UIControl.Event) {
-        self.control = control
-        self.controlEvents = events
-    }
-    
-    func receive<S>(subscriber: S) where S : Subscriber, S.Failure == UIControlPublisher.Failure, S.Input == UIControlPublisher.Output {
-        let subscription = UIControlSubscription(subscriber: subscriber, control: control, event: controlEvents)
-        subscriber.receive(subscription: subscription)
-    }
-}
-
-extension AnyCancellable: ExtensionProperty {
-    
-    typealias T = CancellableBag
-    
-    private struct CustomProperties {
-        static var bag = CancellableBag()
-    }
-    
-    private var cancellableBag: CancellableBag {
-        get {
-            return getAssociatedObject(&CustomProperties.bag, defaultValue: CustomProperties.bag)
-        }
-        set {
-            return objc_setAssociatedObject(self, &CustomProperties.bag, newValue, .OBJC_ASSOCIATION_RETAIN)
-        }
-    }
-    
-    
-    func dispose() {
-        cancellableBag.add(object: self)
-    }
-}
+//    typealias Output = Control
+//    typealias Failure = Never
+//
+//    let control: Control
+//    let controlEvents: UIControl.Event
+//
+//
+//    init(control: Control, events: UIControl.Event) {
+//        self.control = control
+//        self.controlEvents = events
+//    }
+//
+//    func receive<S>(subscriber: S) where S : Subscriber, S.Failure == UIControlPublisher.Failure, S.Input == UIControlPublisher.Output {
+//        let subscription = UIControlSubscription(subscriber: subscriber, control: control, event: controlEvents)
+//        subscriber.receive(subscription: subscription)
+//    }
+//}
+//
+//

@@ -54,13 +54,19 @@ class SortHeader: UIView {
         layoutSubviews()
         layoutIfNeeded()
         
-        sortButton
-            .publisher(for: .touchUpInside)
-            .sink { [weak self] (_) in
-                self?.isSorted.send(!self!.isSorted.value)
-                self?.setupTextAndIcon(state: self!.isSorted.value)
+        sortButton.tapPublisher.sink { [weak self] (_) in
+            self?.isSorted.send(!self!.isSorted.value)
+            self?.setupTextAndIcon(state: self!.isSorted.value)
         }
         .dispose()
+        
+//        sortButton
+//            .publisher(for: .touchUpInside)
+//            .sink { [weak self] (_) in
+//                self?.isSorted.send(!self!.isSorted.value)
+//                self?.setupTextAndIcon(state: self!.isSorted.value)
+//        }
+//        .dispose()
         
         return isSorted.eraseToAnyPublisher()
     }

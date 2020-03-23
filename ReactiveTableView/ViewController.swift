@@ -12,6 +12,7 @@ import Combine
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: ReactiveTableView!
+    @IBOutlet weak var addB: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,15 +51,22 @@ class ViewController: UIViewController {
                 }
         }
         .dispose()
+        
+        
+        addB.tapPublisher.sink { [weak self] (_) in
+            self?.tableView.append(items: [.TextItem(title: "Header 1 ::: item \(self!.tableView.sectionsObservable.value[0].items.count + 1)")], toSection: 0)
+
+        }
+        .dispose()
     }
     
-    @IBAction func add(_ sender: Any) {
-        
-        tableView.append(items: [.TextItem(title: "Header 1 ::: item \(tableView.sectionsObservable.value[0].items.count + 1)")], toSection: 0)
-        
-//        tableView.insert(item: .TextItem(title: "Header 1  inserted ::: item \(tableView.sectionsObservable.value[0].items.count + 1)"), toSection: 0, at: 0)
-        
-    }
+//    @IBAction func add(_ sender: Any) {
+//
+//        tableView.append(items: [.TextItem(title: "Header 1 ::: item \(tableView.sectionsObservable.value[0].items.count + 1)")], toSection: 0)
+//
+////        tableView.insert(item: .TextItem(title: "Header 1  inserted ::: item \(tableView.sectionsObservable.value[0].items.count + 1)"), toSection: 0, at: 0)
+//
+//    }
     
     @IBAction func addSection(_ sender: Any) {
         

@@ -23,9 +23,6 @@
                                 <rect key="frame" x="32" y="73" width="65" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="ADD item"/>
-                                <connections>
-                                    <action selector="add:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aCv-Gl-aNz"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vBc-X0-F73">
                                 <rect key="frame" x="244" y="98" width="132" height="30"/>
@@ -54,6 +51,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="addB" destination="ThZ-eD-wkR" id="Zd1-Sd-Laq"/>
                         <outlet property="tableView" destination="4Hi-XA-RS6" id="M5V-3U-rBl"/>
                     </connections>
                 </viewController>
